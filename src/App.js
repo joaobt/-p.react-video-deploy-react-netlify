@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+   fetch(process.env.REACT_APP_API_URL || "http://localhost:8080/api/v1")
+   .then(() => console.log("Deu certo?"))
+   .catch(() => console.log("Deu errado?"))
   return (
     <div className="App">
       <header className="App-header">
